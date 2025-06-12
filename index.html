@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pecuária de Corte no Paraná</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #1e40af 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        
+        .breed-card {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .breed-overlay {
+            background: rgba(30, 64, 175, 0.7);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .breed-card:hover .breed-overlay {
+            transform: translateY(0);
+        }
+        
+        .staggered-animation {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="fas fa-paw text-blue-400 text-2xl"></i>
+                <span class="font-bold text-xl">GadoPR</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="hover:text-blue-400 transition">Início</a>
+                <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
+                <a href="#racas" class="hover:text-blue-400 transition">Raças</a>
+                <a href="#tecnologia" class="hover:text-blue-400 transition">Tecnologia</a>
+                <a href="#contato" class="hover:text-blue-400 transition">Contato</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 stagger-animation" style="animation-delay: 0.1s;">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Pecuária de Corte no <span class="text-blue-300">Paraná</span></h1>
+                <p class="text-lg mb-8">O Paraná se destaca como um dos principais estados produtores de gado de corte no Brasil, com tecnologia avançada e qualidade superior.</p>
+                <div class="flex space-x-4">
+                    <a href="#sobre" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition">Saiba Mais</a>
+                    <a href="#contato" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg font-medium transition">Contate-nos</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 stagger-animation" style="animation-delay: 0.3s;">
+                <div class="relative rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1535435734705-4f0f32e27d83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80" alt="Gado no pasto no Paraná" class="w-full h-auto rounded-lg">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                        <p class="text-white text-sm">Fazenda modelo de gado de corte no norte do Paraná</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.1s;">
+                    <div class="text-blue-600 text·4xl mb-2">
+                        <i class="fas fa-cow text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-1">13,2 milhões</h3>
+                    <p class="text-gray-600">Cabeças de gado</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.2s;">
+                    <div class="text-blue-600 text·4xl mb-2">
+                        <i class="fas fa-map-marked-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-1">280 mil</h3>
+                    <p class="text-gray-600">Estabelecimentos rurais</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.3s;">
+                    <div class="text-blue-600 text·4xl mb-2">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-1">3º Lugar</h3>
+                    <p class="text-gray-600">No ranking nacional</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.4s;">
+                    <div class="text-blue-600 text·4xl mb-2">
+                        <i class="fas fa-globe-americas text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-1">60+ Países</h3>
+                    <p class="text-gray-600">Exportação de carne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 stagger-animation">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">A Excelência do <span class="text-blue-300">Gado Paranaense</span></h2>
+                    <p class="mb-4 text-gray-300">O Paraná possui um dos sistemas de produção de gado de corte mais avançados do país, combinando tradição com tecnologia de ponta para oferecer carne de qualidade superior.</p>
+                    <p class="mb-4 text-gray-300">Com clima favorável e solos férteis, as fazendas do estado produzem animais com excelente acabamento de carcaça, atendendo aos mais exigentes mercados nacionais e internacionais.</p>
+                    <p class="mb-6 text-gray-300">A pecuária paranaense investe continuamente em genética, nutrição e manejo, garantindo sustentabilidade e bem·estar animal em todo o processo produtivo.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Genética avançada</span>
+                        <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Manejo sustentável</span>
+                        <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Rastreabilidade</span>
+                        <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Qualidade certificada</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12 stagger-animation" style="animation-delay: 0.3s;">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gado no pasto" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1590846404079-36e935de8d7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fazenda de gado" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1569506336083-7b5ba2a9b384?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Vaqueiro com gado" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1516723720023-9e923347b9e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fazenda extensiva" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Cattle Breeds Section -->
+    <section id="racas" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 stagger-animation">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Principais <span class="text-blue-600">Raças</span> Criadas no Paraná</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">O estado abriga raças bovinas adaptadas que proporcionam excelentes resultados em termos de produtividade e qualidade da carne.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="breed-card rounded-xl shadow-xl relative stagger-animation" style="background-image: url('https://images.unsplash.com/photo-1583841898967-c6c1af512536?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                    <div class="breed-overlay">
+                        <h3 class="text-xl font-bold text-white mb-2">Nelore</h3>
+                        <p class="text-gray-200">Principal raça zebuína do Brasil, adaptada ao clima tropical, com excelente resistência e qualidade de carne.</p>
+                    </div>
+                    <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Raça zebuína
+                    </div>
+                </div>
+                
+                <div class="breed-card rounded-xl shadow-xl relative stagger-animation" style="animation-delay: 0.2s; background-image: url('https://images.unsplash.com/photo-1590845947676-fa2576f7f76c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                    <div class="breed-overlay">
+                        <h3 class="text-xl font-bold text-white mb-2">Angus</h3>
+                        <p class="text-gray-200">Raça taurina de origem escocesa, conhecida pelo marmoreio da carne, muito valorizada no mercado.</p>
+                    </div>
+                    <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Raça taurina
+                    </div>
+                </div>
+                
+                <div class="breed-card rounded-xl shadow-xl relative stagger-animation" style="animation-delay: 0.3s; background-image: url('https://images.unsplash.com/photo-1610205292029-e4c6bcba3311?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                    <div class="breed-overlay">
+                        <h3 class="text-xl font-bold text-white mb-2">Brangus</h3>
+                        <p class="text-gray-200">Resultado do cruzamento entre Angus e Nelore, combinando rusticidade com qualidade de carne.</p>
+                    </div>
+                    <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Raça sintética
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="tecnologia" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 stagger-animation">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tecnologia na <span class="text-blue-600">Pecuária</span> Paranaense</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">O estado está na vanguarda da aplicação de tecnologias que revolucionam a produção de gado de corte.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md stagger-animation">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-barcode"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Rastreabilidade Total</h3>
+                    <p class="text-gray-600">Sistemas avançados de identificação individual que monitoram todo o ciclo de vida do animal, da fazenda ao consumidor.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.2s;">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Melhoramento Genético</h3>
+                    <p class="text-gray-600">Seleção genômica de animais superiores que transmitem características desejáveis como ganho de peso e qualidade de carne.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.3s;">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integração Lavoura-Pecuária</h3>
+                    <p class="text-gray-600">Sistema que combina agricultura e pecuária na mesma área, aumentando produtividade e sustentabilidade.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.4s;">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Automação</h3>
+                    <p class="text-gray-600">Equipamentos automatizados para alimentação, pesagem e monitoramento do rebanho, reduzindo custos operacionais.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.5s;">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Big Data</h3>
+                    <p class="text-gray-600">Análise de grandes volumes de dados para tomada de decisão estratégica na gestão da propriedade rural.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md stagger-animation" style="animation-delay: 0.6s;">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Energias Renováveis</h3>
+                    <p class="text-gray-600">Uso de energia solar e biogás para tornar as operações mais sustentáveis e econômicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 stagger-animation">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Depoimentos <span class="text-blue-300">dos Produtores</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-300">O que dizem os pecuaristas paranaenses sobre a produção de gado de corte no estado.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl stagger-animation">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Depoimento" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Mendes</h4>
+                            <p class="text-blue-300 text-sm">Pecuária Mendes • Maringá</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Investir em genética de alto padrão mudou completamente nossa produtividade. Hoje nossos animais atingem o peso de abate mais rápido e com melhor acabamento."</p>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl stagger-animation" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Depoimento" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Lúcia Ramos</h4>
+                            <p class="text-blue-300 text-sm">Fazenda Boa Vista • Londrina</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"A integração lavoura-pecuária nos permitiu triplicar a lotação animal por hectare. Um sistema que só é possível graças ao clima e solos privilegiados do nosso estado."</p>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl stagger-animation" style="animation-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Depoimento" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Roberto Andrade</h4>
+                            <p class="text-blue-300 text-sm">Agropecuária Andrade • Cascavel</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"A certificação de origem que conquistamos abriu as portas do mercado internacional. Hoje exportamos para mais de 15 países com carne de qualidade premium."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 stagger-animation">Pronto para investir na pecuária de corte do Paraná?</h2>
+                <p class="mb-8 text-blue-100 stagger-animation" style="animation-delay: 0.2s;">Junte-se aos principais produtores de gado de corte do Brasil e amplie seus negócios.</p>
+                <div class="stagger-animation" style="animation-delay: 0.3s;">
+                    <a href="#contato" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold transition">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 stagger-animation">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Entre em <span class="text-blue-600">Contato</span></h2>
+                    <p class="mb-6 text-gray-600">Deseja mais informações sobre a pecuária de corte no Paraná? Preencha o formulário ao lado que nossa equipe entrará em contato.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Endereço</h4>
+                                <p class="text-gray-600">Curitiba, Paraná - Brasil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mt-1 mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Telefone</h4>
+                                <p class="text-gray-600">+55 (41) 4002-8922</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mt-1 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">contato@gadopr.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12 stagger-animation" style="animation-delay: 0.3s;">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-paw text-blue-400 text-2xl"></i>
+                        <span class="font-bold text-xl">GadoPR</span>
+                    </div>
+                    <p class="text-gray-400">Promovendo a excelência da pecuária de corte paranaense em todo o mundo.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-blue-400 transition">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-blue-400 transition">Sobre</a></li>
+                        <li><a href="#racas" class="text-gray-400 hover:text-blue-400 transition">Raças</a></li>
+                        <li><a href="#tecnologia" class="text-gray-400 hover:text-blue-400 transition">Tecnologia</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-blue-400 transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Raças</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Nelore</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Angus</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Brangus</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Hereford</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Braford</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Assine nossa newsletter para receber notícias sobre a pecuária paranaense.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 GadoPR. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition">Termos de Serviço</a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add animation classes on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.stagger-animation, .staggered-animation');
+            
+            const animateOnScroll = () => {
+                animateElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.classList.add('staggered-animation');
+                    }
+                });
+            };
+            
+            // Initial check
+            animateOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md\\:hidden.focus\\:outline-none');
+            const mobileMenu = document.querySelector('.md\\:flex.items-center.space-x-8');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-gray-900', 'py-4', 'space-y-4', 'space-x-0', 'px-6');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-gray-900', 'py-4', 'space-y-4', 'space-x-0', 'px-6');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-gray-900', 'py-4', 'space-y-4', 'space-x-0', 'px-6');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
